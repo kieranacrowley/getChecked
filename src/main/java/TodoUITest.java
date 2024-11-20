@@ -15,17 +15,8 @@ public class TodoUITest {
 
     @BeforeEach
     public void setup() {
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--start-maximized");
         driver = new ChromeDriver();
     }
-
-    @AfterEach
-    /*public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }*/
 
     @Test
     public void testTodoMVC() throws Exception {
@@ -76,10 +67,6 @@ public class TodoUITest {
 
         // Verify TODO 2 is removed
         Assertions.assertTrue(driver.findElements(By.xpath("//li[.='" + todo2 + "']")).isEmpty(), "TODO 2 was not removed");
-        //Close browser as finished test
-       /* if (driver != null) {
-            driver.quit();
-        }*/
     }
 
     private void takeScreenshot(String stepName) throws Exception {
