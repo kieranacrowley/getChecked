@@ -26,7 +26,6 @@ public class JsonAPITest {
                 .get("/posts/1")
                 .then()
                 .extract().response();
-
         // Log request and response
         logToAllure("GET /posts/1", response);
 

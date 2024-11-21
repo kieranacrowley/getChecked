@@ -22,7 +22,6 @@ public class TodoUITest {
     public void testTodoMVC() throws Exception {
         String baseUrl = "https://todomvc.com/examples/react/dist/";
         driver.get(baseUrl);
-
         // Validate the URL
         Assertions.assertEquals(baseUrl, driver.getCurrentUrl(), "Failed to navigate to TodoMVC");
         takeScreenshot("Initial Load");
